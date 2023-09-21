@@ -1,6 +1,7 @@
 import { Box } from "@chakra-ui/react";
-import NavBar from "../Navbar";
+
 import { Outlet } from "react-router-dom";
+import NavBar from "../NavBar";
 
 const Layout = () => {
   return (

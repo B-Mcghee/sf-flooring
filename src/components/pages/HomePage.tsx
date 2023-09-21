@@ -1,4 +1,4 @@
-import { Grid, Show, GridItem, Flex, Box } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 
 const HomePage = () => {
   return (
