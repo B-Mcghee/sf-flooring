@@ -1,22 +1,28 @@
 import {
   Box,
-  Button,
+  Card,
   Container,
-  Grid,
   GridItem,
   Heading,
   Image,
   SimpleGrid,
 } from "@chakra-ui/react";
 import woodBackground from "../../assets/wood-background.jpg";
+import ceramicTile from "../../assets/ceramic-tile.jpg";
+import luxVinylPlank from "../../assets/luxury-vinyl-plank.jpg";
+import engineerHardwood from "../../assets/engineered-hardwood.jpg";
+import laminateFloor from "../../assets/living_room_floor.jpg";
+import customFireplace from "../../assets/custom-fireplace.jpeg";
 import { Center } from "@chakra-ui/react";
 import EstimateButton from "../EstimateButton";
+import ProjectCardContainer from "../ProjectCardContainer";
+import { AspectRatio } from "@chakra-ui/react";
 
 const ProjectPage = () => {
   const categories = [
     {
       title: "Luxury Vinyl Plank",
-      imageUrl: woodBackground,
+      imageUrl: luxVinylPlank,
     },
     {
       title: "Luxury Vinyl Tile",
@@ -24,20 +30,20 @@ const ProjectPage = () => {
     },
     {
       title: "Ceramic Tile",
-      imageUrl: woodBackground,
+      imageUrl: ceramicTile,
     },
     {
       title: "Laminate",
-      imageUrl: woodBackground,
+      imageUrl: laminateFloor,
     },
     {
       title: "Engineered Hardwood",
-      imageUrl: woodBackground,
+      imageUrl: engineerHardwood,
     },
 
     {
       title: "Custom Designs",
-      imageUrl: woodBackground,
+      imageUrl: customFireplace,
     },
   ];
   return (
@@ -52,7 +58,7 @@ const ProjectPage = () => {
       >
         <Heading
           as="h1"
-          size={{ base: "2xl", md: "4xl" }}
+          size={{ base: "3xl", md: "4xl" }}
           fontFamily="Saira Condensed"
           fontWeight="700"
         >
@@ -65,15 +71,28 @@ const ProjectPage = () => {
       <Container maxW="container.xl">
         <SimpleGrid minChildWidth="300px" gap={5}>
           {categories.map((category) => (
-            <GridItem m={4}>
-              <Heading as="h3" size="xl" fontFamily="Saira Condensed" my={2}>
-                {category.title}
-              </Heading>
-              <Image src={woodBackground} height="300px" />
+            <GridItem key={category.title} m={4}>
+              <ProjectCardContainer>
+                <Card>
+                  <Heading
+                    as="h3"
+                    size="xl"
+                    fontFamily="Saira Condensed"
+                    my={2}
+                    noOfLines={1}
+                  >
+                    {category.title}
+                  </Heading>
+
+                  <AspectRatio>
+                    <Image src={category.imageUrl} objectFit="fill" />
+                  </AspectRatio>
+                </Card>
+              </ProjectCardContainer>
             </GridItem>
           ))}
         </SimpleGrid>
-        <Center mt={10}>
+        <Center my={10}>
           <EstimateButton />
         </Center>
       </Container>

@@ -13,14 +13,36 @@ import {
   Text,
 } from "@chakra-ui/react";
 
+const titleFont = {
+  "font-family": "Saira Condensed",
+};
+
+const bodyFont = {
+  "font-family": "Inter",
+  "line-height": "1",
+  "font-size": "12px",
+  "font-weight": "300",
+  "padding-bottom": "4px",
+};
+
+const subHeading = {
+  "font-family": "Saira Condensed",
+  "font-weight": "500",
+};
 const FaqPage = () => {
   return (
     <>
       <Container maxW="container.xl">
-        <Heading fontSize="3xl" textAlign="center">
-          <Text display="inline-block" color="red" mr={2} my={8}>
-            Questions?
-          </Text>
+        <Heading
+          fontSize="3xl"
+          textAlign="center"
+          sx={titleFont}
+          noOfLines={1}
+          my={8}
+        >
+          <Box as="span" color="red">
+            Questions?{" "}
+          </Box>
           Look Here
         </Heading>
         <SimpleGrid>
@@ -35,6 +57,7 @@ const FaqPage = () => {
                         pl={2}
                         as="h4"
                         fontSize="xl"
+                        sx={titleFont}
                       >
                         Why is Repairing Damaged Subfloors Important?
                       </Heading>
@@ -43,16 +66,24 @@ const FaqPage = () => {
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
-              <AccordionPanel pb={4}>
+              <AccordionPanel
+                pb={4}
+                fontFamily="Inter"
+                fontWeight={300}
+                fontSize={12}
+                lineHeight={1}
+              >
                 Replacing a damaged subfloor is crucial for several reasons.
                 First and foremost, the subfloor serves as the foundation for
                 your entire flooring structure. If it's compromised, it can lead
                 to uneven floors, structural instability, and safety hazards.
                 <br />
+                <br />
                 Additionally, damaged subfloor can impact the integrity of your
                 surface flooring, causing it to crack, warp, or wear unevenly.
                 Damaged subfloors can lead to moisture infiltration, which can
                 result in mold growth, rot, and further deterioration.
+                <br />
                 <br />
                 By replacing a damaged subfloor, you ensure a stable foundation,
                 maintain the structural integrity of your home, and prevent
@@ -69,6 +100,7 @@ const FaqPage = () => {
                         pl={2}
                         as="h4"
                         fontSize="xl"
+                        sx={titleFont}
                       >
                         What are the key benefits of tile flooring?
                       </Heading>
@@ -82,15 +114,18 @@ const FaqPage = () => {
                   <AccordionItem>
                     <h2>
                       <AccordionButton>
-                        <Box as="span" flex="1" textAlign="left">
-                          <HStack>
-                            <Text fontWeight="semibold">Durability</Text>
-                          </HStack>
+                        <Box
+                          as="span"
+                          flex="1"
+                          textAlign="left"
+                          sx={subHeading}
+                        >
+                          Durability
                         </Box>
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4}>
+                    <AccordionPanel pb={4} sx={bodyFont}>
                       Ceramic tiles are incredibly durable and can withstand
                       heavy foot traffic, making them perfect for high-traffic
                       areas like kitchens, hallways, and entryways.
@@ -101,13 +136,13 @@ const FaqPage = () => {
                       <AccordionButton>
                         <Box as="span" flex="1" textAlign="left">
                           <HStack>
-                            <Text fontWeight="semibold">Variety of Styles</Text>
+                            <Text sx={subHeading}>Variety of Styles</Text>
                           </HStack>
                         </Box>
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4}>
+                    <AccordionPanel pb={4} sx={bodyFont}>
                       They come in an extensive range of colors, patterns, and
                       sizes, allowing you to achieve various looks and styles to
                       match your decor.
@@ -118,13 +153,13 @@ const FaqPage = () => {
                       <AccordionButton>
                         <Box as="span" flex="1" textAlign="left">
                           <HStack>
-                            <Text fontWeight="semibold">Easy Maintenance</Text>
+                            <Text sx={subHeading}>Easy Maintenance</Text>
                           </HStack>
                         </Box>
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4}>
+                    <AccordionPanel pb={4} sx={bodyFont}>
                       Ceramic tiles are easy to clean and maintain. Spills,
                       stains, and dirt can be wiped away quickly, and regular
                       sweeping or mopping keeps them looking great.
@@ -135,7 +170,7 @@ const FaqPage = () => {
                       <AccordionButton>
                         <Box as="span" flex="1" textAlign="left">
                           <HStack>
-                            <Text fontWeight="semibold">
+                            <Text sx={subHeading}>
                               Water and Moisture Resistance
                             </Text>
                           </HStack>
@@ -143,7 +178,7 @@ const FaqPage = () => {
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4}>
+                    <AccordionPanel pb={4} sx={bodyFont}>
                       Ceramic tiles are naturally resistant to water and
                       moisture, making them an ideal choice for bathrooms,
                       kitchens, and other areas prone to spills.
@@ -154,13 +189,13 @@ const FaqPage = () => {
                       <AccordionButton>
                         <Box as="span" flex="1" textAlign="left">
                           <HStack>
-                            <Text fontWeight="semibold">Hypoallergenic</Text>
+                            <Text sx={subHeading}>Hypoallergenic</Text>
                           </HStack>
                         </Box>
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4}>
+                    <AccordionPanel pb={4} sx={bodyFont}>
                       Unlike carpets, ceramic tiles don't trap allergens like
                       dust, pet dander, or pollen, contributing to better indoor
                       air quality.
@@ -171,13 +206,13 @@ const FaqPage = () => {
                       <AccordionButton>
                         <Box as="span" flex="1" textAlign="left">
                           <HStack>
-                            <Text fontWeight="semibold">Longevity</Text>
+                            <Text sx={subHeading}>Longevity</Text>
                           </HStack>
                         </Box>
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4}>
+                    <AccordionPanel pb={4} sx={bodyFont}>
                       With proper installation and care, ceramic tile flooring
                       can last for decades, making it a cost-effective long-term
                       option.
@@ -188,13 +223,13 @@ const FaqPage = () => {
                       <AccordionButton>
                         <Box as="span" flex="1" textAlign="left">
                           <HStack>
-                            <Text fontWeight="semibold">Heat Resistance</Text>
+                            <Text sx={subHeading}>Heat Resistance</Text>
                           </HStack>
                         </Box>
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4}>
+                    <AccordionPanel pb={4} sx={bodyFont}>
                       Ceramic tiles are heat-resistant, which makes them
                       suitable for areas near stoves, fireplaces, or outdoor
                       spaces.
@@ -205,7 +240,7 @@ const FaqPage = () => {
                       <AccordionButton>
                         <Box as="span" flex="1" textAlign="left">
                           <HStack>
-                            <Text fontWeight="semibold">
+                            <Text sx={subHeading}>
                               Environmentally Friendly
                             </Text>
                           </HStack>
@@ -213,7 +248,7 @@ const FaqPage = () => {
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4}>
+                    <AccordionPanel pb={4} sx={bodyFont}>
                       Many ceramic tiles are made from natural materials, and
                       they have a low impact on indoor air quality. Some tiles
                       even contain recycled content.
@@ -224,13 +259,13 @@ const FaqPage = () => {
                       <AccordionButton>
                         <Box as="span" flex="1" textAlign="left">
                           <HStack>
-                            <Text fontWeight="semibold">Value Addition</Text>
+                            <Text sx={subHeading}>Value Addition</Text>
                           </HStack>
                         </Box>
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4}>
+                    <AccordionPanel pb={4} sx={bodyFont}>
                       Installing ceramic tile flooring can increase the resale
                       value of your home due to its durability and timeless
                       appeal.
@@ -249,6 +284,7 @@ const FaqPage = () => {
                         pl={2}
                         as="h4"
                         fontSize="xl"
+                        sx={titleFont}
                       >
                         Is there a difference between Luxury vinyl plank (LVP)
                         and Laminate?
@@ -259,15 +295,21 @@ const FaqPage = () => {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                <Box as="span" fontWeight="light" fontStyle="italic" ml={4}>
-                  LVP: Made from synthetic materials like PVC (polyvinyl
-                  chloride) with a photographic layer that mimics the appearance
-                  of wood or stone.
+                <Box as="span" ml={3} sx={bodyFont}>
+                  <Box as="span" fontWeight={700} fontSize={16} mr={3}>
+                    LVP:
+                  </Box>{" "}
+                  Made from synthetic materials like PVC (polyvinyl chloride)
+                  with a photographic layer that mimics the appearance of wood
+                  or stone.
                 </Box>
                 <Divider my={3} />
-                <Box as="span" fontWeight="light" fontStyle="italic" ml={4}>
-                  Laminate: Comprised of fiberboard with a printed layer that
-                  imitates wood or stone, topped with a protective layer.
+                <Box as="span" sx={bodyFont} ml={3}>
+                  <Box as="span" fontWeight={700} fontSize={16} mr={3}>
+                    Laminate:
+                  </Box>{" "}
+                  Comprised of fiberboard with a printed layer that imitates
+                  wood or stone, topped with a protective layer.
                 </Box>
                 <Accordion allowMultiple my={3}>
                   <AccordionItem>
@@ -275,13 +317,13 @@ const FaqPage = () => {
                       <AccordionButton>
                         <Box as="span" flex="1" textAlign="left">
                           <HStack>
-                            <Text fontWeight="semibold">Water Resistance</Text>
+                            <Text sx={subHeading}>Water Resistance</Text>
                           </HStack>
                         </Box>
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4}>
+                    <AccordionPanel pb={4} fontFamily={"Inter"} fontSize={12}>
                       <Box as="span" fontStyle="italic" mr={1}>
                         LVP:
                       </Box>{" "}
@@ -300,13 +342,13 @@ const FaqPage = () => {
                       <AccordionButton>
                         <Box as="span" flex="1" textAlign="left">
                           <HStack>
-                            <Text fontWeight="semibold">Durability</Text>
+                            <Text sx={subHeading}>Durability</Text>
                           </HStack>
                         </Box>
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4}>
+                    <AccordionPanel pb={4} fontFamily={"Inter"} fontSize={12}>
                       <Box as="span" fontStyle="italic" mr={1}>
                         LVP:
                       </Box>{" "}
@@ -325,13 +367,13 @@ const FaqPage = () => {
                       <AccordionButton>
                         <Box as="span" flex="1" textAlign="left">
                           <HStack>
-                            <Text fontWeight="semibold">Appearance</Text>
+                            <Text sx={subHeading}>Appearance</Text>
                           </HStack>
                         </Box>
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4}>
+                    <AccordionPanel pb={4} fontFamily={"Inter"} fontSize={12}>
                       <Box as="span" fontStyle="italic" mr={1}>
                         LVP:
                       </Box>{" "}
@@ -350,13 +392,13 @@ const FaqPage = () => {
                       <AccordionButton>
                         <Box as="span" flex="1" textAlign="left">
                           <HStack>
-                            <Text fontWeight="semibold">Comfort</Text>
+                            <Text sx={subHeading}>Comfort</Text>
                           </HStack>
                         </Box>
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4}>
+                    <AccordionPanel pb={4} fontFamily={"Inter"} fontSize={12}>
                       <Box as="span" fontStyle="italic" mr={1}>
                         LVP:
                       </Box>{" "}
@@ -375,7 +417,7 @@ const FaqPage = () => {
                       <AccordionButton>
                         <Box as="span" flex="1" textAlign="left">
                           <HStack>
-                            <Text fontWeight="semibold">Price</Text>
+                            <Text sx={subHeading}>Price</Text>
                           </HStack>
                         </Box>
                         <AccordionIcon />
@@ -407,6 +449,7 @@ const FaqPage = () => {
                         pl={2}
                         as="h4"
                         fontSize="xl"
+                        sx={titleFont}
                       >
                         How long does a project take to complete?
                       </Heading>
@@ -415,7 +458,7 @@ const FaqPage = () => {
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
-              <AccordionPanel pb={4}>
+              <AccordionPanel pb={4} sx={bodyFont}>
                 That varies on the size of the project, but we at SF Premier
                 Flooring ensure that along with our quality assurance that we
                 work efficiently and effectively to complete whatever size
@@ -432,6 +475,7 @@ const FaqPage = () => {
                         pl={2}
                         as="h4"
                         fontSize="xl"
+                        sx={titleFont}
                       >
                         Can you lay laminate/ luxury vinyl on existing floor?
                       </Heading>
@@ -440,7 +484,7 @@ const FaqPage = () => {
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
-              <AccordionPanel pb={4}>
+              <AccordionPanel pb={4} sx={bodyFont}>
                 There are certain floors that you are able to lay
                 laminate/luxury vinyl on top of existing floors. It mostly
                 depends on the condition of the floor beneath what you’re

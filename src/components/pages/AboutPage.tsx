@@ -1,13 +1,4 @@
-import {
-  HStack,
-  Heading,
-  Image,
-  SimpleGrid,
-  VStack,
-  Text,
-  Box,
-  Flex,
-} from "@chakra-ui/react";
+import { Heading, Image, SimpleGrid, Text, Box, Flex } from "@chakra-ui/react";
 import aboutPhoto from "../../assets/about_photo.jpg";
 import EstimateButton from "../EstimateButton";
 import malletPhoto from "../../assets/rubber-mallet.png";
