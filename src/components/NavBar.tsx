@@ -1,8 +1,8 @@
-import { HStack, Icon, Image } from "@chakra-ui/react";
+import { HStack, Image } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import logo from "../assets/SF_Premier_Flooring_Logo_Final.png";
 // import ColorModeSwitch from "./ColorModeSwitch";
-import { RxHamburgerMenu } from "react-icons/rx";
+
 import NavBarMenu from "./NavBarMenu";
 
 const NavBar = () => {
@@ -12,12 +12,13 @@ const NavBar = () => {
         padding="10px"
         backgroundColor="#E7E8E8"
         justifyContent="space-between"
+        zIndex={2}
+        width="100vw"
       >
         <Link to="/">
           <Image src={logo} boxSize="70px" objectFit="contain" />
         </Link>
         <HStack margin={1}>
-          <Icon as={RxHamburgerMenu} boxSize={10} color="black" />
           <NavBarMenu />
         </HStack>
       </HStack>

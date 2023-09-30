@@ -10,6 +10,7 @@ import {
 import woodBackground from "../../assets/wood-background.jpg";
 import ceramicTile from "../../assets/ceramic-tile.jpg";
 import luxVinylPlank from "../../assets/luxury-vinyl-plank.jpg";
+import luxVinylTile from "../../assets/luxury-vinyl-tile.jpg";
 import engineerHardwood from "../../assets/engineered-hardwood.jpg";
 import laminateFloor from "../../assets/living_room_floor.jpg";
 import customFireplace from "../../assets/custom-fireplace.jpeg";
@@ -26,7 +27,7 @@ const ProjectPage = () => {
     },
     {
       title: "Luxury Vinyl Tile",
-      imageUrl: woodBackground,
+      imageUrl: luxVinylTile,
     },
     {
       title: "Ceramic Tile",

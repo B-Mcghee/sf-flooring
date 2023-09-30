@@ -14,20 +14,20 @@ import {
 } from "@chakra-ui/react";
 
 const titleFont = {
-  "font-family": "Saira Condensed",
+  fontFamily: "Saira Condensed",
 };
 
 const bodyFont = {
-  "font-family": "Inter",
-  "line-height": "1",
-  "font-size": "12px",
-  "font-weight": "300",
-  "padding-bottom": "4px",
+  fontFamily: "Inter",
+  lineHeight: "1",
+  fontSize: "12px",
+  fontWeight: "300",
+  paddingBottom: "4px",
 };
 
 const subHeading = {
-  "font-family": "Saira Condensed",
-  "font-weight": "500",
+  fontFamily: "Saira Condensed",
+  fontWeight: "500",
 };
 const FaqPage = () => {
   return (
