@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/SF_Premier_Flooring_Logo_Final.png";
 // import ColorModeSwitch from "./ColorModeSwitch";
 import { RxHamburgerMenu } from "react-icons/rx";
+import NavBarMenu from "./NavBarMenu";
 
 const NavBar = () => {
   return (
@@ -17,6 +18,7 @@ const NavBar = () => {
         </Link>
         <HStack margin={1}>
           <Icon as={RxHamburgerMenu} boxSize={10} color="black" />
+          <NavBarMenu />
         </HStack>
       </HStack>
     </>
