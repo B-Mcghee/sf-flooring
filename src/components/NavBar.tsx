@@ -32,7 +32,7 @@ const NavBar = () => {
             <NavLink to={{ pathname: "/about" }}>About Us</NavLink>
             <NavLink to={{ pathname: "/projects" }}>Projects</NavLink>
             <NavLink to={{ pathname: "/faq" }}>F.A.Q</NavLink>
-            <EstimateButton />
+            <EstimateButton size="sm" font="sm" />
           </HStack>
         </Show>
       </Flex>

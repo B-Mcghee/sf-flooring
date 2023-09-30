@@ -12,6 +12,7 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
+import Carousel from "../Carousel";
 
 const titleFont = {
   fontFamily: "Saira Condensed",
@@ -494,6 +495,7 @@ const FaqPage = () => {
           </Accordion>
         </SimpleGrid>
       </Container>
+      <Carousel></Carousel>
     </>
   );
 };

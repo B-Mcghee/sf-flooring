@@ -10,16 +10,37 @@ import {
 } from "@chakra-ui/react";
 import FormComponent from "./pages/FormComponent";
 
-function EstimateButton() {
+interface Props {
+  size: string;
+  font: string;
+}
+function EstimateButton({ size, font }: Props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const sizeValues: { [key: string]: string } = {
+    xs: "100px",
+    sm: "150px",
+    md: "200px",
+    lg: "300px",
+    xl: "400px",
+  };
+  const fontValues: { [key: string]: string } = {
+    xs: "10px",
+    sm: "12x",
+    md: "16px",
+    lg: "24px",
+    xl: "28px",
+  };
+  const value = sizeValues[size];
+  const fontValue = fontValues[font];
+  console.log(value);
   return (
     <>
       <Button
         colorScheme="red"
-        fontSize="24"
-        minW={{ base: 150, md: 400 }}
-        px={{ base: 8 }}
-        py={{ base: 6 }}
+        fontSize={{ base: fontValue, md: fontValues["lg"] }}
+        width={{ base: value, md: sizeValues["md"] }}
+        px={{ base: 5 }}
+        py={{ base: 4 }}
         onClick={onOpen}
       >
         Get an Estimate

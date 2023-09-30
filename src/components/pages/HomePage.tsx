@@ -14,6 +14,7 @@ import landingPagePhoto from "../../assets/kitchen_floor.jpg";
 import livingRoomPhoto from "../../assets/living_room_floor.jpg";
 import luxuryVinylTile from "../../assets/luxury-vinyl-tile.jpg";
 import highEndLaminate from "../../assets/high-end-laminate.jpg";
+import luxuryVinylPlank from "../../assets/luxury-vinyl-plank.jpg";
 
 import getCroppedImageUrl from "../../services/image-url";
 import ProjectCardContainer from "../ProjectCardContainer";
@@ -22,61 +23,17 @@ import EstimateButton from "../EstimateButton";
 const HomePage = () => {
   return (
     <>
-      {/* <Grid
-        templateAreas={{
-          base: `"main"`,
-          lg: `"nav nav" "aside main"`, // 1024px
-        }}
-        templateColumns={{
-          base: "1fr",
-          lg: "200px 1fr",
-        }}
-        width="100%"
-        padding={0}
-      >
-  
-        <GridItem area={"main"}>
-          <Outlet />
-          <Box>
-            <Image
-              height="450px"
-              width="100%"
-              src={getCroppedImageUrl(landingPagePhoto)}
-              objectFit="cover"
-            />
-            <Box width="75%" backgroundColor="white" marginTop={-20}>
-              <Heading fontSize="xl" padding={5}>
-                TRANSFORM YOUR HOME WITH OUR FLOORING EXPERTISE
-              </Heading>
-              <Box>
-                <Text>Elevate Your Space with SF Premier Flooring</Text>
-                <Button color="blue">Get an Estimate</Button>
-              </Box>
-            </Box>
-          </Box>
-        </GridItem>
-        <GridItem>
-          <Heading margin={5} fontSize={"xl"}>
-            Our Latest Projects
-          </Heading>
-          <SimpleGrid justifyContent="center">
-            <GridItem>
-              <Image boxSize="90%" src={livingRoomPhoto} />
-            </GridItem>
-          </SimpleGrid>
-        </GridItem>
-      </Grid> */}
       <Box position="relative">
         <Box
           height={{ base: "450px" }}
-          bgImage={getCroppedImageUrl(landingPagePhoto)}
-          bgPosition="contain"
+          bgImage={{ base: landingPagePhoto, lg: luxuryVinylPlank }}
+          bgPosition="bottom"
           bgSize="cover"
         />
         <Box
           as="div"
           bg="#fff"
-          w={{ base: "300px" }}
+          w={{ base: "300px", md: "500px" }}
           h={{ base: "300px" }}
           textAlign="center"
           mt={{ base: -150 }}
@@ -113,7 +70,7 @@ const HomePage = () => {
                 </Button> 
                 
     </Box> */}
-              <EstimateButton />
+              <EstimateButton size="sm" font="sm" />
             </SimpleGrid>
           </Container>
         </Box>

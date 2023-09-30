@@ -26,15 +26,22 @@ function NavBarMenu() {
       <Drawer placement={"right"} onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerHeader borderBottomWidth="1px">Menu</DrawerHeader>
+          <DrawerHeader borderBottomWidth="1px" onClick={onClose}>
+            Menu
+          </DrawerHeader>
           <DrawerBody>
-            <Flex direction="column">
+            <Flex
+              direction="column"
+              alignItems={"center"}
+              gap={5}
+              fontSize={24}
+            >
               {menuItems.map((item, index) => (
                 <Link to={item.path} key={index} onClick={() => onClose()}>
                   {item.title}
                 </Link>
               ))}
-              <EstimateButton />
+              <EstimateButton size="md" font="sm" />
             </Flex>
           </DrawerBody>
         </DrawerContent>

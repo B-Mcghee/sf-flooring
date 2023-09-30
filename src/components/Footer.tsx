@@ -1,4 +1,4 @@
-import { HStack, Heading } from "@chakra-ui/react";
+import { Box, HStack, Heading } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 // import ColorModeSwitch from "./ColorModeSwitch";
@@ -14,7 +14,12 @@ const Footer = () => {
         mt={20}
       >
         <Link to="/">
-          <Heading>Ready to Get Started?</Heading>
+          <Heading size={{ base: "sm" }} fontFamily={"Saira Condensed"}>
+            Ready to Get{" "}
+            <Box as="span" color={"red"}>
+              Started?
+            </Box>
+          </Heading>
         </Link>
       </HStack>
     </>
