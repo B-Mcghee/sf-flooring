@@ -94,7 +94,7 @@ const ProjectPage = () => {
           ))}
         </SimpleGrid>
         <Center my={10}>
-          <EstimateButton />
+          <EstimateButton size="sm" font="sm" />
         </Center>
       </Container>
     </>

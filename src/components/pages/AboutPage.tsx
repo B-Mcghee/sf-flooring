@@ -8,9 +8,9 @@ const AboutPage = () => {
     transform: "rotate(169.4deg)",
     zIndex: "-1",
     position: "absolute",
-    top: 14,
-    left: -20,
-    maxWidth: "250px",
+    top: { base: 14, md: -10 },
+    left: { base: -20, md: -28 },
+    maxWidth: { base: "250px", md: "400px" },
   };
 
   const woodStyle = {
@@ -29,7 +29,7 @@ const AboutPage = () => {
       <Box mt={10} mb={20}>
         <Heading
           as="h3"
-          fontSize="3xl"
+          size={{ base: "xl", md: "2xl" }}
           textAlign={"center"}
           fontFamily="Saira Condensed"
           fontWeight="bold"
@@ -38,7 +38,7 @@ const AboutPage = () => {
         </Heading>
         <Heading
           as="h3"
-          fontSize="3xl"
+          size={{ base: "xl", md: "2xl" }}
           textAlign={"center"}
           fontFamily="Saira Condensed"
           fontWeight="bold"
@@ -56,7 +56,7 @@ const AboutPage = () => {
           <Box textAlign="left" w="100%" m={2}>
             <Heading
               as={"h3"}
-              fontSize="2xl"
+              size={{ base: "lg", md: "2xl" }}
               borderLeft="4px solid red"
               pl={2}
               display="inline-block"
@@ -67,7 +67,11 @@ const AboutPage = () => {
               Our Vision
             </Heading>
 
-            <Text fontSize="12" fontFamily="Inter" lineHeight="1">
+            <Text
+              fontSize={{ base: 12, md: "xl" }}
+              fontFamily="Inter"
+              lineHeight="1"
+            >
               SF Premier Flooring strives to be the foremost provider of
               exceptional flooring solutions, renowned for innovation, quality
               craftsmanship, and unmatched customer satisfaction.
@@ -142,7 +146,7 @@ const AboutPage = () => {
           </Box>
         </Box>
         <Box my={100} textAlign="center">
-          <EstimateButton />
+          <EstimateButton size={"sm"} font={"sm"} />
         </Box>
         <Image src={woodPhoto} sx={woodStyle} />
       </SimpleGrid>

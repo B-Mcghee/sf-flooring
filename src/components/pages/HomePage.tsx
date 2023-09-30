@@ -16,7 +16,6 @@ import luxuryVinylTile from "../../assets/luxury-vinyl-tile.jpg";
 import highEndLaminate from "../../assets/high-end-laminate.jpg";
 import luxuryVinylPlank from "../../assets/luxury-vinyl-plank.jpg";
 
-import getCroppedImageUrl from "../../services/image-url";
 import ProjectCardContainer from "../ProjectCardContainer";
 import EstimateButton from "../EstimateButton";
 
