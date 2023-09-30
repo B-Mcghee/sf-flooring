@@ -4,14 +4,20 @@ import {
   Image,
   Heading,
   Text,
-  Button,
   SimpleGrid,
   Container,
+  AspectRatio,
+  Card,
 } from "@chakra-ui/react";
 
 import landingPagePhoto from "../../assets/kitchen_floor.jpg";
 import livingRoomPhoto from "../../assets/living_room_floor.jpg";
+import luxuryVinylTile from "../../assets/luxury-vinyl-tile.jpg";
+import highEndLaminate from "../../assets/high-end-laminate.jpg";
+
 import getCroppedImageUrl from "../../services/image-url";
+import ProjectCardContainer from "../ProjectCardContainer";
+import EstimateButton from "../EstimateButton";
 
 const HomePage = () => {
   return (
@@ -95,7 +101,7 @@ const HomePage = () => {
               <Text fontFamily="Inter" fontSize={12} textAlign={"left"}>
                 Elevate Your Space with SF Premier Flooring
               </Text>
-              <Box display="inline" textAlign="left">
+              {/* <Box display="inline" textAlign="left">
                 <Button
                   colorScheme="red"
                   fontSize="24"
@@ -104,20 +110,50 @@ const HomePage = () => {
                   py={{ base: 6 }}
                 >
                   Get an Estimate
-                </Button>
-              </Box>
+                </Button> 
+                
+    </Box> */}
+              <EstimateButton />
             </SimpleGrid>
           </Container>
         </Box>
       </Box>
-      <Heading margin={5} fontSize={"xl"}>
-        Our Latest Projects
-      </Heading>
-      <SimpleGrid justifyContent="center">
-        <GridItem>
-          <Image boxSize="90%" src={livingRoomPhoto} />
-        </GridItem>
-      </SimpleGrid>
+      <Box>
+        <Heading margin={5} fontSize={"xl"}>
+          Our Latest Projects
+        </Heading>
+        <Container maxW="container.xl">
+          <SimpleGrid minChildWidth="250px" gap={7}>
+            <GridItem>
+              <ProjectCardContainer>
+                <Card>
+                  <AspectRatio>
+                    <Image src={livingRoomPhoto} />
+                  </AspectRatio>
+                </Card>
+              </ProjectCardContainer>
+            </GridItem>
+            <GridItem>
+              <ProjectCardContainer>
+                <Card>
+                  <AspectRatio>
+                    <Image src={luxuryVinylTile} />
+                  </AspectRatio>
+                </Card>
+              </ProjectCardContainer>
+            </GridItem>
+            <GridItem>
+              <ProjectCardContainer>
+                <Card>
+                  <AspectRatio>
+                    <Image src={highEndLaminate} />
+                  </AspectRatio>
+                </Card>
+              </ProjectCardContainer>
+            </GridItem>
+          </SimpleGrid>
+        </Container>
+      </Box>
     </>
   );
 };

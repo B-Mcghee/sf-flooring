@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-router-dom";
+import EstimateButton from "./EstimateButton";
 
 function NavBarMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -33,6 +34,7 @@ function NavBarMenu() {
                   {item.title}
                 </Link>
               ))}
+              <EstimateButton />
             </Flex>
           </DrawerBody>
         </DrawerContent>
