@@ -6,9 +6,9 @@ function EstimateButton() {
       <Button
         colorScheme="red"
         fontSize="24"
-        minW={{ base: 200, md: 400 }}
-        px={8}
-        py={7}
+        minW={{ base: 150, md: 400 }}
+        px={{ base: 8 }}
+        py={{ base: 6 }}
       >
         Get an Estimate
       </Button>

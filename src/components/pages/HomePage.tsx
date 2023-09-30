@@ -1,17 +1,14 @@
 import {
-  Grid,
-  Show,
   GridItem,
   Box,
   Image,
   Heading,
-  Card,
-  CardBody,
   Text,
   Button,
   SimpleGrid,
+  Container,
 } from "@chakra-ui/react";
-import { Outlet } from "react-router-dom";
+
 import landingPagePhoto from "../../assets/kitchen_floor.jpg";
 import livingRoomPhoto from "../../assets/living_room_floor.jpg";
 import getCroppedImageUrl from "../../services/image-url";
@@ -19,7 +16,7 @@ import getCroppedImageUrl from "../../services/image-url";
 const HomePage = () => {
   return (
     <>
-      <Grid
+      {/* <Grid
         templateAreas={{
           base: `"main"`,
           lg: `"nav nav" "aside main"`, // 1024px
@@ -31,11 +28,7 @@ const HomePage = () => {
         width="100%"
         padding={0}
       >
-        <Show above="lg">
-          <GridItem area={"aside"} paddingX={5}>
-            {/* <GenreList /> */}
-          </GridItem>
-        </Show>
+  
         <GridItem area={"main"}>
           <Outlet />
           <Box>
@@ -45,15 +38,15 @@ const HomePage = () => {
               src={getCroppedImageUrl(landingPagePhoto)}
               objectFit="cover"
             />
-            <Card width="75%" backgroundColor="white" marginTop={-20}>
+            <Box width="75%" backgroundColor="white" marginTop={-20}>
               <Heading fontSize="xl" padding={5}>
                 TRANSFORM YOUR HOME WITH OUR FLOORING EXPERTISE
               </Heading>
-              <CardBody>
+              <Box>
                 <Text>Elevate Your Space with SF Premier Flooring</Text>
-                <Button colorScheme="red">Get an Estimate</Button>
-              </CardBody>
-            </Card>
+                <Button color="blue">Get an Estimate</Button>
+              </Box>
+            </Box>
           </Box>
         </GridItem>
         <GridItem>
@@ -66,7 +59,65 @@ const HomePage = () => {
             </GridItem>
           </SimpleGrid>
         </GridItem>
-      </Grid>
+      </Grid> */}
+      <Box position="relative">
+        <Box
+          height={{ base: "450px" }}
+          bgImage={getCroppedImageUrl(landingPagePhoto)}
+          bgPosition="contain"
+          bgSize="cover"
+        />
+        <Box
+          as="div"
+          bg="#fff"
+          w={{ base: "300px" }}
+          h={{ base: "300px" }}
+          textAlign="center"
+          mt={{ base: -150 }}
+          zIndex={2}
+        >
+          <Container>
+            <SimpleGrid columns={1} gap={5}>
+              <Heading
+                w={230}
+                lineHeight={1}
+                fontWeight={700}
+                fontFamily="Saira Condensed"
+                as="h3"
+                fontSize={24}
+                borderLeft="4px solid red"
+                pl={3}
+                textAlign="left"
+                mt={8}
+              >
+                TRANSFORM YOUR HOME WITH OUR FLOORING EXPERTISE{" "}
+              </Heading>
+              <Text fontFamily="Inter" fontSize={12} textAlign={"left"}>
+                Elevate Your Space with SF Premier Flooring
+              </Text>
+              <Box display="inline" textAlign="left">
+                <Button
+                  colorScheme="red"
+                  fontSize="24"
+                  minW={{ base: 150, md: 400 }}
+                  px={{ base: 8 }}
+                  py={{ base: 6 }}
+                >
+                  Get an Estimate
+                </Button>
+              </Box>
+            </SimpleGrid>
+          </Container>
+        </Box>
+      </Box>
+      <Heading margin={5} fontSize={"xl"}>
+        Our Latest Projects
+      </Heading>
+      <SimpleGrid justifyContent="center">
+        <GridItem>
+          <Image boxSize="90%" src={livingRoomPhoto} />
+        </GridItem>
+      </SimpleGrid>
     </>
   );
 };
