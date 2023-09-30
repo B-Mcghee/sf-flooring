@@ -12,7 +12,7 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import Carousel from "../Carousel";
+// import Carousel from "../Carousel";
 
 const titleFont = {
   fontFamily: "Saira Condensed",
@@ -21,7 +21,7 @@ const titleFont = {
 const bodyFont = {
   fontFamily: "Inter",
   lineHeight: "1",
-  fontSize: "12px",
+  fontSize: { base: "12px", md: "16px" },
   fontWeight: "300",
   paddingBottom: "4px",
 };
@@ -29,13 +29,14 @@ const bodyFont = {
 const subHeading = {
   fontFamily: "Saira Condensed",
   fontWeight: "500",
+  fontSize: { md: "20px" },
 };
 const FaqPage = () => {
   return (
     <>
-      <Container maxW="container.xl">
+      <Container maxW="container.xl" height={"85vh"}>
         <Heading
-          fontSize="3xl"
+          size={{ base: "xl", md: "2xl" }}
           textAlign="center"
           sx={titleFont}
           noOfLines={1}
@@ -46,7 +47,7 @@ const FaqPage = () => {
           </Box>
           Look Here
         </Heading>
-        <SimpleGrid>
+        <SimpleGrid my={10}>
           <Accordion allowMultiple>
             <AccordionItem my={4}>
               <h2>
@@ -57,7 +58,7 @@ const FaqPage = () => {
                         borderLeft={"3px solid red"}
                         pl={2}
                         as="h4"
-                        fontSize="xl"
+                        size={{ base: "md", md: "lg" }}
                         sx={titleFont}
                       >
                         Why is Repairing Damaged Subfloors Important?
@@ -67,13 +68,7 @@ const FaqPage = () => {
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
-              <AccordionPanel
-                pb={4}
-                fontFamily="Inter"
-                fontWeight={300}
-                fontSize={12}
-                lineHeight={1}
-              >
+              <AccordionPanel pb={4} sx={bodyFont}>
                 Replacing a damaged subfloor is crucial for several reasons.
                 First and foremost, the subfloor serves as the foundation for
                 your entire flooring structure. If it's compromised, it can lead
@@ -100,7 +95,7 @@ const FaqPage = () => {
                         borderLeft={"3px solid red"}
                         pl={2}
                         as="h4"
-                        fontSize="xl"
+                        size={{ base: "md", md: "lg" }}
                         sx={titleFont}
                       >
                         What are the key benefits of tile flooring?
@@ -284,7 +279,7 @@ const FaqPage = () => {
                         borderLeft={"3px solid red"}
                         pl={2}
                         as="h4"
-                        fontSize="xl"
+                        size={{ base: "md", md: "lg" }}
                         sx={titleFont}
                       >
                         Is there a difference between Luxury vinyl plank (LVP)
@@ -324,7 +319,7 @@ const FaqPage = () => {
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4} fontFamily={"Inter"} fontSize={12}>
+                    <AccordionPanel pb={4} sx={bodyFont}>
                       <Box as="span" fontStyle="italic" mr={1}>
                         LVP:
                       </Box>{" "}
@@ -349,7 +344,7 @@ const FaqPage = () => {
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4} fontFamily={"Inter"} fontSize={12}>
+                    <AccordionPanel pb={4} sx={bodyFont}>
                       <Box as="span" fontStyle="italic" mr={1}>
                         LVP:
                       </Box>{" "}
@@ -374,7 +369,7 @@ const FaqPage = () => {
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4} fontFamily={"Inter"} fontSize={12}>
+                    <AccordionPanel pb={4} sx={bodyFont}>
                       <Box as="span" fontStyle="italic" mr={1}>
                         LVP:
                       </Box>{" "}
@@ -399,7 +394,7 @@ const FaqPage = () => {
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4} fontFamily={"Inter"} fontSize={12}>
+                    <AccordionPanel pb={4} sx={bodyFont}>
                       <Box as="span" fontStyle="italic" mr={1}>
                         LVP:
                       </Box>{" "}
@@ -424,7 +419,7 @@ const FaqPage = () => {
                         <AccordionIcon />
                       </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4}>
+                    <AccordionPanel pb={4} sx={bodyFont}>
                       <Box as="span" fontStyle="italic" mr={1}>
                         LVP:
                       </Box>{" "}
@@ -449,7 +444,7 @@ const FaqPage = () => {
                         borderLeft={"3px solid red"}
                         pl={2}
                         as="h4"
-                        fontSize="xl"
+                        size={{ base: "md", md: "lg" }}
                         sx={titleFont}
                       >
                         How long does a project take to complete?
@@ -475,7 +470,7 @@ const FaqPage = () => {
                         borderLeft={"3px solid red"}
                         pl={2}
                         as="h4"
-                        fontSize="xl"
+                        size={{ base: "md", md: "lg" }}
                         sx={titleFont}
                       >
                         Can you lay laminate/ luxury vinyl on existing floor?
@@ -495,7 +490,7 @@ const FaqPage = () => {
           </Accordion>
         </SimpleGrid>
       </Container>
-      <Carousel></Carousel>
+      {/* <Carousel></Carousel> */}
     </>
   );
 };

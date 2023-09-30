@@ -69,7 +69,7 @@ const ProjectPage = () => {
           </Box>
         </Heading>
       </Center>
-      <Container maxW="container.xl">
+      <Container maxW="container.xl" my={10}>
         <SimpleGrid minChildWidth="300px" gap={5}>
           {categories.map((category) => (
             <GridItem key={category.title} m={4}>
@@ -94,7 +94,7 @@ const ProjectPage = () => {
           ))}
         </SimpleGrid>
         <Center my={10}>
-          <EstimateButton size="sm" font="sm" />
+          <EstimateButton size="sm" font="sm" width="400px" />
         </Center>
       </Container>
     </>

@@ -13,8 +13,9 @@ import FormComponent from "./pages/FormComponent";
 interface Props {
   size: string;
   font: string;
+  width?: string;
 }
-function EstimateButton({ size, font }: Props) {
+function EstimateButton({ size, font, width }: Props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const sizeValues: { [key: string]: string } = {
     xs: "100px",
@@ -38,7 +39,7 @@ function EstimateButton({ size, font }: Props) {
       <Button
         colorScheme="red"
         fontSize={{ base: fontValue, md: fontValues["lg"] }}
-        width={{ base: value, md: sizeValues["md"] }}
+        width={{ base: value, md: sizeValues["md"], lg: width }}
         px={{ base: 5 }}
         py={{ base: 4 }}
         onClick={onOpen}

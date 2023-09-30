@@ -62,13 +62,17 @@ const AboutPage = () => {
               display="inline-block"
               fontFamily="Saira Condensed"
               fontWeight="bold"
-              my={2}
+              my={{ base: 2, md: 8 }}
             >
-              Our Vision
+              Our{" "}
+              <Box as="span" color={"red"}>
+                Vision
+              </Box>
             </Heading>
 
             <Text
-              fontSize={{ base: 12, md: "xl" }}
+              fontSize={{ base: 12, md: "2xl" }}
+              my={{ md: 5 }}
               fontFamily="Inter"
               lineHeight="1"
             >
@@ -83,7 +87,7 @@ const AboutPage = () => {
           </Box>
         </Flex>
         <Heading
-          fontSize="3xl"
+          size={{ base: "xl", md: "2xl" }}
           textAlign="center"
           fontFamily="Saira Condensed"
           fontWeight="bold"
@@ -96,7 +100,7 @@ const AboutPage = () => {
         <Box ml={5}>
           <Heading
             as="h4"
-            fontSize="xl"
+            size={{ base: "sm", md: "lg" }}
             m={2}
             fontFamily="Saira Condensed"
             fontWeight="bold"
@@ -104,7 +108,12 @@ const AboutPage = () => {
             Transparency
           </Heading>
           <Box>
-            <Text fontSize="12" fontFamily="Inter" lineHeight="1">
+            <Text
+              fontSize={{ base: "xs", md: "lg" }}
+              fontFamily="Inter"
+              lineHeight="1"
+              px={2}
+            >
               At SF Premier Flooring, we are committed to transparency in every
               aspect of our business. We believe in open and honest
               communication with our customers, employees, and partners. This
@@ -122,7 +131,7 @@ const AboutPage = () => {
         <Box ml={5} mt={4}>
           <Heading
             as="h4"
-            fontSize="xl"
+            size={{ base: "sm", md: "lg" }}
             m={2}
             fontFamily="Saira Condensed"
             fontWeight="bold"
@@ -130,7 +139,12 @@ const AboutPage = () => {
             Devotion
           </Heading>
           <Box>
-            <Text fontSize="12" fontFamily="Inter" lineHeight={1}>
+            <Text
+              fontSize={{ base: "xs", md: "lg" }}
+              fontFamily="Inter"
+              lineHeight={1}
+              px={2}
+            >
               The devotion to our craft and customers is unwavering. We are
               deeply committed to delivering flooring solutions that exceed
               expectations in terms of quality, aesthetics, and functionality.
@@ -146,7 +160,7 @@ const AboutPage = () => {
           </Box>
         </Box>
         <Box my={100} textAlign="center">
-          <EstimateButton size={"sm"} font={"sm"} />
+          <EstimateButton size={"sm"} font={"sm"} width="400px" />
         </Box>
         <Image src={woodPhoto} sx={woodStyle} />
       </SimpleGrid>

@@ -98,7 +98,7 @@ const HomePage = () => {
                 </Card>
               </ProjectCardContainer>
             </GridItem>
-            <GridItem>
+            <GridItem mb={20}>
               <ProjectCardContainer>
                 <Card>
                   <AspectRatio>

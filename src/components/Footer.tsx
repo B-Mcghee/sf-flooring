@@ -11,7 +11,6 @@ const Footer = () => {
         backgroundColor="#E7E8E8"
         justifyContent="space-between"
         align="baseline"
-        mt={20}
       >
         <Link to="/">
           <Heading size={{ base: "sm" }} fontFamily={"Saira Condensed"}>
