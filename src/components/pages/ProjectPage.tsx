@@ -19,32 +19,40 @@ import EstimateButton from "../EstimateButton";
 import ProjectCardContainer from "../ProjectCardContainer";
 import { AspectRatio } from "@chakra-ui/react";
 
+import ProjectPopup from "../ProjectPopup";
+
 const ProjectPage = () => {
   const categories = [
     {
       title: "Luxury Vinyl Plank",
       imageUrl: luxVinylPlank,
+      slug: "luxury-vinyl-plank",
     },
     {
       title: "Luxury Vinyl Tile",
       imageUrl: luxVinylTile,
+      slug: "luxury-vinyl-tile",
     },
     {
       title: "Ceramic Tile",
       imageUrl: ceramicTile,
+      slug: "ceramic-tile",
     },
     {
       title: "Laminate",
       imageUrl: laminateFloor,
+      slug: "laminate",
     },
     {
       title: "Engineered Hardwood",
       imageUrl: engineerHardwood,
+      slug: "engineered-hardwood",
     },
 
     {
       title: "Custom Designs",
       imageUrl: customFireplace,
+      slug: "custom-designs",
     },
   ];
   return (
@@ -74,21 +82,23 @@ const ProjectPage = () => {
           {categories.map((category) => (
             <GridItem key={category.title} m={4}>
               <ProjectCardContainer>
-                <Card>
-                  <Heading
-                    as="h3"
-                    size="xl"
-                    fontFamily="Saira Condensed"
-                    my={2}
-                    noOfLines={1}
-                  >
-                    {category.title}
-                  </Heading>
+                <ProjectPopup project={category}>
+                  <Card>
+                    <Heading
+                      as="h3"
+                      size="xl"
+                      fontFamily="Saira Condensed"
+                      my={2}
+                      noOfLines={1}
+                    >
+                      {category.title}
+                    </Heading>
 
-                  <AspectRatio>
-                    <Image src={category.imageUrl} objectFit="fill" />
-                  </AspectRatio>
-                </Card>
+                    <AspectRatio>
+                      <Image src={category.imageUrl} objectFit="fill" />
+                    </AspectRatio>
+                  </Card>
+                </ProjectPopup>
               </ProjectCardContainer>
             </GridItem>
           ))}

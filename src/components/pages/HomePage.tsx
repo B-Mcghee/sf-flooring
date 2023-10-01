@@ -84,7 +84,7 @@ const HomePage = () => {
               <ProjectCardContainer>
                 <Card>
                   <AspectRatio>
-                    <Image src={livingRoomPhoto} />
+                    <Image src={highEndLaminate} />
                   </AspectRatio>
                 </Card>
               </ProjectCardContainer>
@@ -102,7 +102,7 @@ const HomePage = () => {
               <ProjectCardContainer>
                 <Card>
                   <AspectRatio>
-                    <Image src={highEndLaminate} />
+                    <Image src={livingRoomPhoto} />
                   </AspectRatio>
                 </Card>
               </ProjectCardContainer>

@@ -11,17 +11,20 @@ import {
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 // And react-slick as our Carousel Lib
 import Slider from "react-slick";
-import vinylPlanks from "../services/luxury-vinyl-plank-service";
+
 // Settings for the slider
 
-const Carousel = () => {
+interface Props {
+  photos: string[];
+}
+const Carousel = ({ photos }: Props) => {
   const settings = {
     dots: true,
     arrows: false,
     fade: true,
     infinite: true,
 
-    speed: 500,
+    speed: 200,
 
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -76,7 +79,7 @@ const Carousel = () => {
       </IconButton>
       {/* Slider */}
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
-        {vinylPlanks.map((url, index) => (
+        {photos.map((url, index) => (
           <Box key={index} position={"relative"}>
             <Container maxW={"container.xl"}>
               <Center>

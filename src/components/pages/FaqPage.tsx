@@ -61,7 +61,7 @@ const FaqPage = () => {
                         size={{ base: "md", md: "lg" }}
                         sx={titleFont}
                       >
-                        Why is Repairing Damaged Subfloors Important?
+                        Why is repairing damaged subfloors important?
                       </Heading>
                     </HStack>
                   </Box>
@@ -282,8 +282,8 @@ const FaqPage = () => {
                         size={{ base: "md", md: "lg" }}
                         sx={titleFont}
                       >
-                        Is there a difference between Luxury vinyl plank (LVP)
-                        and Laminate?
+                        Is there a difference between luxury vinyl plank (LVP)
+                        and laminate?
                       </Heading>
                     </HStack>
                   </Box>

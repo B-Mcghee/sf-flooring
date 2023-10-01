@@ -15,7 +15,7 @@ interface Props {
   font: string;
   width?: string;
 }
-function EstimateButton({ size, font, width }: Props) {
+const EstimateButton = ({ size, font, width }: Props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const sizeValues: { [key: string]: string } = {
     xs: "100px",
@@ -33,7 +33,6 @@ function EstimateButton({ size, font, width }: Props) {
   };
   const value = sizeValues[size];
   const fontValue = fontValues[font];
-  console.log(value);
   return (
     <>
       <Button
@@ -63,6 +62,6 @@ function EstimateButton({ size, font, width }: Props) {
       </Modal>
     </>
   );
-}
+};
 
 export default EstimateButton;

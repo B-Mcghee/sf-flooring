@@ -12,7 +12,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import EstimateButton from "./EstimateButton";
 
-function NavBarMenu() {
+const NavBarMenu = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const menuItems = [
     { title: "Home", path: "/" },
@@ -48,5 +48,5 @@ function NavBarMenu() {
       </Drawer>
     </>
   );
-}
+};
 export default NavBarMenu;

@@ -1,6 +1,7 @@
 {
   "name": "sf-flooring",
   "private": true,
+  "homepage": "http://sfpremierflooring.com",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
