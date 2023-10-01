@@ -20,6 +20,24 @@ const router = createBrowserRouter([
       { path: "/faq", element: <FaqPage /> },
     ],
   },
+  {
+    path: "/about",
+    element: <Layout />,
+    errorElement: <ErrorPage />,
+    children: [{ index: true, element: <AboutPage /> }],
+  },
+  {
+    path: "/projects",
+    element: <Layout />,
+    errorElement: <ErrorPage />,
+    children: [{ index: true, element: <ProjectPage /> }],
+  },
+  {
+    path: "/faq",
+    element: <Layout />,
+    errorElement: <ErrorPage />,
+    children: [{ index: true, element: <FaqPage /> }],
+  },
 ]);
 
 export default router;
